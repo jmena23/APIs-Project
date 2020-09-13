@@ -57,3 +57,22 @@ def uso_plantilla(df, equipo, partidos):
     tab.auto_set_font_size(False)
     tab.set_fontsize(8)
     fig.savefig('output/graficos/uso_plantilla.png')
+
+def est_jug(df, jug):
+    jugador = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.nombre == jug]
+    team = jugador.iniciales_equipo.iloc[0]
+    equip = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.iniciales_equipo == team]
+    jugador.loc[1] = ["MEDIA EQUIPO", team, equip.pts.mean(), equip.reb.mean(), equip.ast.mean()]
+    jugador = jugador.reset_index(drop = True)
+    fig, ax = plt.subplots(figsize=(10, 6)) 
+
+    ax.xaxis.set_visible(False)  
+    ax.yaxis.set_visible(False)  
+
+    ax.set_frame_on(False)  
+
+    tab = table(ax, jugador, loc='center')  
+
+    tab.auto_set_font_size(False)
+    tab.set_fontsize(9)
+    fig.savefig('output/graficos/est_jug_equipo.png')

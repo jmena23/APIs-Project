@@ -16,10 +16,11 @@ def main():
     part_jug = args.part_jug
 
     gf.porpais(df, nationality)
-    gf.pctiro(df, ini_equipo)
-    gf.jugpais(df,ini_equipo)
     gf.roster(df, ini_equipo)
     gf.uso_plantilla(df, ini_equipo, part_jug)
+    gf.pctiro(df, ini_equipo)
+    gf.jugpais(df,ini_equipo)
+    gf.est_jug(df, jugador)
     
 
 
