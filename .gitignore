@@ -129,3 +129,7 @@ dmypy.json
 .pyre/
 
 .ipynb_checkpoints
+__pycache__
+all_seasons.csv
+nbaplayers20192020.csv
+Untitled-checkpoint.ipynb
