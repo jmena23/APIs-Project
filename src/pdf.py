@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from fpdf import FPDF
 import src.web_scr as wc
  
