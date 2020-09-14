@@ -30,6 +30,8 @@ def porpais(df, nat):
 
 def roster(df, team):
     a = df[['nombre', 'edad', 'altura_cm', 'peso_kg', 'pct_tiro']][df.iniciales_equipo == team]
+    a['peso_kg'] = a['peso_kg'].apply(lambda x: round((x),2))
+    a['pct_tiro'] = a['pct_tiro'].apply(lambda x: round((x),2))
     fig, ax = plt.subplots(figsize=(12, 5)) 
 
     ax.xaxis.set_visible(False)  
@@ -62,7 +64,7 @@ def est_jug(df, jug):
     jugador = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.nombre == jug]
     team = jugador.iniciales_equipo.iloc[0]
     equip = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.iniciales_equipo == team]
-    jugador.loc[1] = ["MEDIA EQUIPO", team, equip.pts.mean(), equip.reb.mean(), equip.ast.mean()]
+    jugador.loc[1] = ["MEDIA EQUIPO", team, round((equip.pts.mean()),2), round((equip.reb.mean()),2), round((equip.ast.mean()),2)]
     jugador = jugador.reset_index(drop = True)
     fig, ax = plt.subplots(figsize=(10, 6)) 
 
@@ -76,3 +78,5 @@ def est_jug(df, jug):
     tab.auto_set_font_size(False)
     tab.set_fontsize(9)
     fig.savefig('output/graficos/est_jug_equipo.png')
+
+    
