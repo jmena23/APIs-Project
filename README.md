@@ -24,14 +24,14 @@ La metodología seguida para el desarrollo de este proyecto es la siguiente:
 
 ## Organización del proyecto
 
-- Archivo .ipynb donde se puede ver el dataset, cu limpieza y la consulta a la API
-- Archivo main.py el cual se puede ejecutar desde la terminal
+- Archivo .ipynb donde se puede ver el dataset, su limpieza y la consulta a la API
+- Archivo main.py el cual se puede ejecutar desde la terminal y hacer consultas filtradas mediante etiquetas
 - Carpeta src donde se pueden ver 4 archivos .py que alimentan al principal.
     - etiquetas.py contiene etiquetas para aplicar filtros en el dataset
     - graficos.py contiene las funciones que elaboran los gráficos y tablas
     - pdf.py que elabora el reporte en pdf
     - web_scr.py que contiene un pequeño scrapeo a la web de la NBA para extraer los nombres de la franquicias
-- Carpeta output contiene un ejemplo de reporte en .pdf y una carpeta con los gráficos del reporte
+- Carpeta output que contiene un ejemplo de reporte en .pdf y una carpeta con los gráficos del reporte
 
 ## Enlaces de interés
 
