@@ -33,6 +33,18 @@ La metodología seguida para el desarrollo de este proyecto es la siguiente:
     - web_scr.py que contiene un pequeño scrapeo a la web de la NBA para extraer los nombres de la franquicias
 - Carpeta output que contiene un ejemplo de reporte en .pdf y una carpeta con los gráficos del reporte
 
+## Filtrado mediante etiquetas
+
+´-t´ filtrado por las iniciales de la franquicia (3 letras): 
+
+    ['ATL', 'BKN', 'BOS', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
+     'HOU', 'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN','NOP', 'NYK', 
+     'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
+
+´-p´ filtrado por nombre del jugador
+´-n´ filtrado por país de procedencia
+´-g´ filtrado por número de partidos jugados en la temporada
+
 ## Enlaces de interés
 
 https://docs.python.org/3/library/argparse.html
