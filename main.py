@@ -4,6 +4,7 @@ import argparse
 import pandas as pd
 import src.etiquetas as tq
 import src.graficos as gf
+import src.pdf as pf
 
 
 def main():
@@ -21,6 +22,7 @@ def main():
     gf.pctiro(df, ini_equipo)
     gf.jugpais(df,ini_equipo)
     gf.est_jug(df, jugador)
+    pf.imprimepdf()
     
 
 

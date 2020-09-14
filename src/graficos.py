@@ -14,7 +14,7 @@ def pctiro(df, ini_equipo):
     plt.xlabel("Jugadores", fontsize = 14)
     plt.ylabel("porcentaje de tiro", fontsize = 14)
     plt.suptitle(f"Porcentaje de tiro por jugador {ini_equipo}", y = 0.92, fontsize = 15)
-    plt.savefig("output/graficos/precio_medio_distrito.png", bbox_inches = 'tight')
+    plt.savefig("output/graficos/pct_tiro.png", bbox_inches = 'tight')
 
 def jugpais(df, team):
     labels = sorted(df[df.iniciales_equipo == team]['pais'].unique())
