@@ -35,15 +35,17 @@ La metodología seguida para el desarrollo de este proyecto es la siguiente:
 
 ## Filtrado mediante etiquetas
 
-´-t´ filtrado por las iniciales de la franquicia (3 letras): 
+-t filtrado por las iniciales de la franquicia (3 letras): 
 
     ['ATL', 'BKN', 'BOS', 'CHA', 'CHI', 'CLE', 'DAL', 'DEN', 'DET', 'GSW', 
      'HOU', 'IND', 'LAC', 'LAL', 'MEM', 'MIA', 'MIL', 'MIN','NOP', 'NYK', 
      'OKC', 'ORL', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
 
-´-p´ filtrado por nombre del jugador
-´-n´ filtrado por país de procedencia
-´-g´ filtrado por número de partidos jugados en la temporada
+-p filtrado por nombre del jugador
+
+-n filtrado por país de procedencia
+
+-g filtrado por número de partidos jugados en la temporada
 
 ## Enlaces de interés
 
