@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 from pandas.plotting import table
 
 def pctiro(df, ini_equipo):
+    """
+    Elabora gráfico de barras con los porcentajes de tiro de la franquicia elegida
+    """
     
     a = df[['nombre', 'edad', 'altura_cm', 'peso_kg', 'pct_tiro']][df.iniciales_equipo == ini_equipo].sort_values(by = 'pct_tiro')
 
@@ -17,6 +20,9 @@ def pctiro(df, ini_equipo):
     plt.savefig("output/graficos/pct_tiro.png", bbox_inches = 'tight')
 
 def jugpais(df, team):
+    """
+    Elabora gráfico circular con la distribución de jugadores según país de procedencia
+    """
     labels = sorted(df[df.iniciales_equipo == team]['pais'].unique())
     datos = df[df.iniciales_equipo == team].groupby("pais")["pais"].count()
     fig = plt.figure(figsize = (5,5))
@@ -26,9 +32,15 @@ def jugpais(df, team):
     plt.savefig("output/graficos/dist_jug_pais.png", bbox_inches = 'tight')
 
 def porpais(df, nat):
-    print(df[df.pais == nat].sort_values(by = 'part_jug', ascending = False))
+    """
+    Imprime por pantalla los jugadores de la nacionalidad elegida
+    """
+    print(df[['nombre', 'iniciales_equipo', 'part_jug']][df.pais == nat].sort_values(by = 'part_jug', ascending = False))
 
 def roster(df, team):
+    """
+    Elabora una tabla con la plantilla de los jugadores de la franquicia elegida
+    """
     a = df[['nombre', 'edad', 'altura_cm', 'peso_kg', 'pct_tiro']][df.iniciales_equipo == team]
     a['peso_kg'] = a['peso_kg'].apply(lambda x: round((x),2))
     a['pct_tiro'] = a['pct_tiro'].apply(lambda x: round((x),2))
@@ -46,6 +58,10 @@ def roster(df, team):
     fig.savefig('output/graficos/roster_equipo.png')
 
 def uso_plantilla(df, equipo, partidos):
+    """
+    Elabora una tabla con los jugadores de la franquicia elegida que han jugados al menos 
+    el nº de partidos elegido
+    """
     datos = df[['nombre', 'part_jug']][(df.iniciales_equipo == equipo) & (df.part_jug >= partidos)]
     fig, ax = plt.subplots(figsize=(8, 6)) 
 
@@ -61,6 +77,10 @@ def uso_plantilla(df, equipo, partidos):
     fig.savefig('output/graficos/uso_plantilla.png')
 
 def est_jug(df, jug):
+    """
+    Elabora una tabla que compara las estadísticas del jugador con la media de su equipo en
+    puntos, rebotes y asistencias
+    """
     jugador = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.nombre == jug]
     team = jugador.iniciales_equipo.iloc[0]
     equip = df[['nombre', 'iniciales_equipo', 'pts', 'reb', 'ast']][df.iniciales_equipo == team]

@@ -2,6 +2,13 @@
 import argparse
 
 def etiquetado():
+    """
+    Mediante esta función se establecen 4 etiquetas para poder filtrar los resultados de main.py
+    -t: filtrar franquicias por sus 3 iniciales
+    -p: filtrar jugadores por su nombre
+    -n: filtar dataset por nacionalidad de los jugadores
+    -g: filtrar número de partidos que han jugado en la temporada 
+    """
 
     parser = argparse.ArgumentParser(description='Estadísticas jugadores NBA temporada 2019-2020')
 

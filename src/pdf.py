@@ -3,6 +3,9 @@ import src.web_scr as wc
  
 
 def imprimepdf():
+    """
+    Esta función elabora el pdf con los gráficos generados por el archivo graficos.py
+    """
     pdf = FPDF('P', 'mm', 'A4')
     pdf.add_page()
 

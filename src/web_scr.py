@@ -4,6 +4,10 @@ import pandas as pd
 import src.etiquetas as tq
 
 def dimefranq():
+    """
+    Mediante esta función se obtienen los nombres de las 30 francquicias NBA haciendo una consulta a la web
+    de la propia NBA
+    """
     df = pd.read_csv('output/nbaplayers20192020.csv')
     args = tq.etiquetado()
     ini_equipo = args.roster
