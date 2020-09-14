@@ -15,6 +15,34 @@ La API utilizada ha sido https://rapidapi.com/theapiguy/api/free-nba/endpoints
 
 ## Metodología
 
+La metodología seguida para el desarrollo de este proyecto es la siguiente:
+
+- Elección de dataset, enriquecimiento del mismo mediante consulta a API y limpieza de datos
+- Creación de script ejecutable desde consola
+- Elaboración de funciones que alimentan al programa principal (main.py)
+- Creación de reporte en pdf con los outputs del programa principal
+
 ## Organización del proyecto
 
+- Archivo .ipynb donde se puede ver el dataset, cu limpieza y la consulta a la API
+- Archivo main.py el cual se puede ejecutar desde la terminal
+- Carpeta src donde se pueden ver 4 archivos .py que alimentan al principal.
+    - etiquetas.py contiene etiquetas para aplicar filtros en el dataset
+    - graficos.py contiene las funciones que elaboran los gráficos y tablas
+    - pdf.py que elabora el reporte en pdf
+    - web_scr.py que contiene un pequeño scrapeo a la web de la NBA para extraer los nombres de la franquicias
+- Carpeta output contiene un ejemplo de reporte en .pdf y una carpeta con los gráficos del reporte
+
 ## Enlaces de interés
+
+https://docs.python.org/3/library/argparse.html
+
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+https://pyfpdf.readthedocs.io/en/latest/index.html
+
+https://pandas.pydata.org/docs/
+
+https://matplotlib.org/3.3.1/contents.html
+
+https://2.python-requests.org/en/master/
