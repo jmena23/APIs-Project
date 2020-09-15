@@ -18,7 +18,7 @@ def main():
     gf.porpais(df, nationality)
     gf.roster(df, ini_equipo)
     gf.uso_plantilla(df, ini_equipo, part_jug)
-    gf.pctiro(df, ini_equipo)
+    gf.estad_equ(df, ini_equipo)
     gf.jugpais(df,ini_equipo)
     gf.est_jug(df, jugador)
     pf.imprimepdf()

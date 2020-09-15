@@ -1,24 +1,13 @@
 #!/usr/bin/env python3
 import matplotlib.pyplot as plt
 from pandas.plotting import table
+import seaborn as sns
 
-def pctiro(df, ini_equipo):
-    """
-    Elabora gráfico de barras con los porcentajes de tiro de la franquicia elegida
-    """
-    
-    a = df[['nombre', 'edad', 'altura_cm', 'peso_kg', 'pct_tiro']][df.iniciales_equipo == ini_equipo].sort_values(by = 'pct_tiro')
-
-    fig, ax = plt.subplots(figsize = (10,8))
-    x = [i for i in a.nombre]
-    theme1 = plt.get_cmap('Wistia')
-    plt.bar(a.nombre, a.pct_tiro, color = [theme1(1. * i / len(x)) for i in range(len(x))])
-    ax.set_xticks(x)
-    ax.set_xticklabels(x, rotation = 90)
-    plt.xlabel("Jugadores", fontsize = 14)
-    plt.ylabel("porcentaje de tiro", fontsize = 14)
-    plt.suptitle(f"Porcentaje de tiro por jugador {ini_equipo}", y = 0.92, fontsize = 15)
-    plt.savefig("output/graficos/pct_tiro.png", bbox_inches = 'tight')
+def estad_equ(df, ini):
+    fig, ax = plt.subplots(figsize = (9,7))
+    sns.boxplot(x=['pts', 'reb', 'ast'], y=[df.pts, df.reb, df.ast])
+    plt.suptitle(f"Estadísticas de la plantilla de {ini}", y = 0.92, fontsize = 15)
+    plt.savefig("output/graficos/pts_reb_asis.png", bbox_inches = 'tight')
 
 def jugpais(df, team):
     """

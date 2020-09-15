@@ -24,7 +24,7 @@ def imprimepdf():
     pdf.set_font('Times', '',8)
     pdf.text(127, 115, f'USO DE LA PLANTILLA > {partidos} partidos jugados')
     pdf.image('output/graficos/uso_plantilla.png',x=112, y=125, w=90, h=100)
-    pdf.image('output/graficos/pct_tiro.png',x=20, y=190, w=90, h=90)
+    pdf.image('output/graficos/pts_reb_asis.png',x=20, y=190, w=90, h=90)
     pdf.set_font('Times', '',8)
     pdf.image('output/graficos/est_jug_equipo.png',x=112, y=180, w=90, h=100)
     
