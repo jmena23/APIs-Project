@@ -4,6 +4,9 @@ from pandas.plotting import table
 import seaborn as sns
 
 def estad_equ(df, ini):
+    """
+    Elabora gráfico de caja y bigoter con las estadísticas de la franquicia
+    """
     fig, ax = plt.subplots(figsize = (9,7))
     sns.boxplot(x=['pts', 'reb', 'ast'], y=[df.pts, df.reb, df.ast])
     plt.suptitle(f"Estadísticas de la plantilla de {ini}", y = 0.92, fontsize = 15)
