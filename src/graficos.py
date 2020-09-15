@@ -5,7 +5,7 @@ import seaborn as sns
 
 def estad_equ(df, ini):
     """
-    Elabora gráfico de caja y bigoter con las estadísticas de la franquicia
+    Elabora gráfico de caja y bigotes con las estadísticas de la franquicia
     """
     fig, ax = plt.subplots(figsize = (9,7))
     sns.boxplot(x=['pts', 'reb', 'ast'], y=[df.pts, df.reb, df.ast])
